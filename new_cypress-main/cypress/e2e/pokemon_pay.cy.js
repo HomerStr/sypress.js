@@ -2,8 +2,8 @@ describe('Покупка автара', function () {
     
     it('Верный пароль и верный логин', function () {
         cy.visit('https://pokemonbattle.ru/login');
-        cy.get(':nth-child(1) > .auth__input').type('Homerstr@yandex.ru');
-        cy.get('#password').type('K2ymSmgvj575-Wk')
+        cy.get(':nth-child(1) > .auth__input').type('USER_LOGIN');
+        cy.get('#password').type('USER_PASSWORD')
         cy.get('.auth__button').click();
         cy.wait(2000);
         cy.get('.header__container > .header__id').should('be.visible'); // Есть кнопка ID аватара и видна для пользователю
